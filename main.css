@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  min-width: 97vw;
+  min-height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+  gap: 25px;
+  width: 85%;
+}
+
+main section {
+  padding: 20px 30px 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 0px #d3d3d3;
+}
+
+main section .personal-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main section .personal-info .image img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+main section .personal-info .name {
+}
+main section .personal-info .name p:first-child {
+  margin: 2px 0;
+  color: white;
+  font-size: 12px;
+}
+main section .personal-info .name p:last-child {
+  margin: 0;
+  color: hsl(0, 0%, 81%);
+  opacity: 0.5;
+  font-size: 12px;
+}
+main section .p1 {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+main section .p2 {
+  color: hsl(0, 0%, 81%);
+  font-size: 11px;
+}
+
+main section.daniel {
+  grid-area: daniel;
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+}
+main section.daniel::after {
+  content: "“";
+  position: absolute;
+  font-size: 310px;
+  font-weight: 500;
+  right: 90px;
+  top: -70px;
+  opacity: 0.3;
+  color: hsl(0, 0%, 81%);
+}
+main section.jonathan {
+  grid-area: jonathan;
+  background-color: hsl(217, 19%, 35%);
+}
+main section.jeanette {
+  grid-area: jeanette;
+  background-color: white;
+  p {
+    color: hsl(217, 19%, 35%) !important;
+  }
+  .p2 {
+    opacity: 0.5;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+main section.patrick {
+  grid-area: patrick;
+  background-color: hsl(219, 29%, 14%);
+}
+main section.kira {
+  grid-area: kira;
+  background-color: white;
+  p {
+    color: hsl(217, 19%, 35%) !important;
+  }
+  .p2 {
+    opacity: 0.5;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+@media (width <= 480px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
